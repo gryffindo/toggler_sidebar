@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sidebar UI</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="display">
+		<h1 class="hide_n_seek">I am doing practice to make more perfect toggler sidebar using vanilla javascript. Click on the toggler button. Then Click anywhere</h1>
+		<h2>\[f(x) = toggler.sidebar\]</h2>
+	</div>
+	<div id="toggle">
+
+	</div>
+	<div id="sidebar">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Team</a></li>
+			<li><a href="#">Portfolio</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</div>
+
+
+	<script>
+		const toggle = document.getElementById('toggle')
+		const sidebar = document.getElementById('sidebar')
+		const heading = document.getElementsByClassName('hide_n_seek')
+
+		document.onclick = function(e) {
+			if(e.target.id !== 'sidebar' && e.target.id !== 'toggle') {
+				toggle.classList.remove('active')
+				sidebar.classList.remove('active')
+
+			}
+		}
+
+
+
+		toggle.onclick = function() {
+			toggle.classList.toggle('active')
+			sidebar.classList.toggle('active')
+		}
+	</script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>
